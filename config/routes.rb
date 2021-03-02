@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :appointments
   resources :customers
   resources :users
   post 'authenticate', to: 'authentication#authenticate'
