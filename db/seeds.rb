@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.create(name:"Gary",lastname:"Cordero",email:"GaryCordero1690@gmail.com",password:"123456")
 
 30.times do 
   fullnameArr = Faker::Name.name.split(" ")
