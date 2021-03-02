@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
   end 
 
   def update
-    customer ||= Customer.find(params[:id])
+    customer ||= Customer.find_by(id:params[:id])
     if(customer)
       customer.update(customer_params)
       render json: customer
@@ -25,7 +25,7 @@ class CustomersController < ApplicationController
   end 
 
   def destroy
-    customer ||= Customer.find(params[:id])
+    customer ||= Customer.find_by(id:params[:id])
     if(customer)
       customer.destroy
       render json: customer
