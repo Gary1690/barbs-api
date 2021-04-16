@@ -25,6 +25,7 @@ class CustomersController < ApplicationController
   end 
 
   def destroy
+    byebug
     customer ||= Customer.find_by(id:params[:id])
     if(customer)
       customer.destroy
